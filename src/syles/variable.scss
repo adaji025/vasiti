@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+$roboto: "Roboto", sans-serif;
+
+$dark: #242120;
+$darkBg: #222222;
+$light: #eef8ff;
+$milk: #fff8f5;
+$pink: #ff5c00;
+$blue: #0d019a;
+$green: #049a01;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
