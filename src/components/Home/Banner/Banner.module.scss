@@ -59,11 +59,15 @@
       flex: 1;
       background: url(../../../assets/svgs/Subtract.svg);
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: 150%;
       background-position: bottom;
       min-height: 60vh;
       display: flex;
       justify-content: center;
+
+      @include breakpoint(sm) {
+        background-size: 100%;
+      }
 
       img {
         max-width: 100%;
