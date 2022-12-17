@@ -1,9 +1,205 @@
-.footer {
-    position: relative;
-    margin-top: 80px;
+@import "../../syles/variable.scss";
 
-    .wrapper {
-        background: #25201D;
-        overflow: hidden;
+.footer {
+  margin-top: 200px;
+
+  &__wrapper {
+    background: #25201d;
+    padding-block: 24px;
+
+    &__content {
+      position: relative;
+
+      &__first {
+        display: flex;
+        flex-direction: column;
+        max-width: 1080px;
+        width: 100%;
+        padding-inline: 1rem;
+        margin-inline: auto;
+
+        @include breakpoint(md) {
+          flex-direction: row;
+        }
+
+        &__left {
+          display: flex;
+          justify-content: center;
+          order: 2;
+
+          @include breakpoint(md) {
+            justify-content: start;
+            min-height: 50vh;
+            width: 50%;
+            order: 1;
+          }
+
+          img {
+            position: relative;
+            max-width: 437px;
+
+            @media (max-width: 800px) {
+              max-width: 337px;
+            }
+
+            @include breakpoint(md) {
+              position: absolute;
+              top: -60px;
+            }
+          }
+        }
+
+        &__right {
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          order: 1;
+          margin-bottom: 24px;
+
+          @include breakpoint(md) {
+            width: 50%;
+            justify-content: end;
+            order: 2;
+          }
+
+          div {
+            h2 {
+              font-weight: bold;
+              font-size: 32px;
+
+              @include breakpoint(md) {
+                font-size: 40px;
+              }
+
+              span {
+                display: unset;
+
+                @media (max-width: 576px) {
+                  display: block;
+                }
+
+                @include breakpoint(md) {
+                  display: block;
+                }
+              }
+            }
+
+            p {
+              max-width: 368px;
+              margin-top: 12px;
+            }
+
+            div {
+              max-width: 368px;
+              height: 52px;
+              display: flex;
+              align-items: center;
+              background: rgba(255, 255, 255, 0.2);
+              border-radius: 6px;
+              margin-top: 24px;
+
+              input {
+                flex: 1;
+                height: 52px;
+                background: transparent;
+                outline: none;
+                border: none;
+                padding-inline: 16px;
+              }
+              button {
+                width: 111px;
+                height: 42px;
+                background: white;
+                outline: none;
+                border: none;
+                margin-right: 5px;
+                border-radius: 6px;
+                font-weight: 600;
+                font-size: 12px;
+                color: $dark;
+              }
+            }
+          }
+        }
+      }
+
+      &__second {
+        display: flex;
+        max-width: 1180px;
+        margin-inline: auto;
+        margin-top: 24px;
+        padding-inline: 1rem;
+
+        @include breakpoint(md) {
+          margin-top: 3px;
+        }
+
+        &__grid {
+          width: 100%;
+          display: grid;
+          gap: 24px;
+          grid-template-columns: repeat(2, auto);
+
+          @include breakpoint(md) {
+            grid-template-columns: repeat(5, auto);
+          }
+
+          div {
+            &:nth-child(5) {
+              display: flex;
+
+              @include breakpoint(md) {
+                justify-content: end;
+              }
+              div {
+                p {
+                  margin-top: 20px;
+                }
+                div {
+                  flex-direction: row;
+                  span {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 24px;
+                    background: white;
+                    color: $dark;
+                  }
+                }
+              }
+            }
+            &:nth-child(4) {
+              display: flex;
+
+              @include breakpoint(md) {
+                justify-content: center;
+              }
+            }
+            h2 {
+              font-weight: bold;
+              font-size: 16px;
+              color: white;
+            }
+
+            div {
+              margin-top: 10px;
+              color: rgba(white, 0.7);
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+
+              span {
+                // display: block;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
