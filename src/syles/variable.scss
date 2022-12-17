@@ -11,9 +11,22 @@ $blue: #0d019a;
 $green: #049a01;
 
 @mixin breakpoint($point) {
+  
+  @if $point == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+
   @if $point == md {
     @media (min-width: 768px) {
       @content;
     }
   }
+  @if $point == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  
 }
