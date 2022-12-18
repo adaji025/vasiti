@@ -1,0 +1,90 @@
+@import "../../../syles/variable.scss";
+
+.experience {
+  position: relative;
+  background: $darkBg;
+
+  @include breakpoint(lg) {
+    margin-top: -62px;
+  }
+
+  &__wrapper {
+    max-width: 1280px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+    padding-top: 32px;
+
+    @include breakpoint(lg) {
+      flex-direction: row;
+    }
+
+    &__left {
+      order: 2;
+
+      @include breakpoint(lg) {
+        order: 1;
+      }
+      img { 
+        margin-bottom: -5px;
+        object-fit: cover;
+        width: 100%;
+
+        @include breakpoint(md) {
+          width: unset;
+        }
+      }
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      order: 1;
+      padding: 1rem;
+
+      @include breakpoint(lg) {
+        order: 2;
+        max-width: 419px;
+        padding: 0;
+      }
+
+      &__title {
+        margin-bottom: 24px;
+        h3 {
+          font-size: 24px;
+
+          @include breakpoint(sm) {
+            font-size: 32px;
+          }
+        }
+        button {
+          width: 95px;
+          height: 30px;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          border-radius: 4px;
+          margin-top: 6px;
+          background: transparent;
+          color: white;
+          font-size: 13px;
+          cursor: pointer;
+          text-transform: uppercase;
+        }
+      }
+
+      &__footer {
+        margin-top: 24px;
+        display: inline-flex;
+        flex-direction: column;
+        max-width: 247px;
+
+        p {
+          font-weight: 500;
+          letter-spacing: 0.2em;
+        }
+      }
+    }
+  }
+}

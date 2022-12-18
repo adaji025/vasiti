@@ -17,7 +17,7 @@ const Banner = () => {
           </p>
         </div>
         <div className={styles.banner__wrapper__right}>
-          <img src={bannerImg} alt="" />
+          <img src={bannerImg} alt="lady and a guy" />
         </div>
       </div>
     </div>
