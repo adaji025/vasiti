@@ -28,7 +28,7 @@
       @include breakpoint(lg) {
         order: 1;
       }
-      img { 
+      img {
         margin-bottom: -5px;
         object-fit: cover;
         width: 100%;
@@ -82,6 +82,116 @@
 
         p {
           font-weight: 500;
+          letter-spacing: 0.2em;
+        }
+      }
+    }
+  }
+}
+
+.experienceTwo {
+  background: $milk;
+
+  @include breakpoint(lg) {
+    margin-top: 62px;
+  }
+
+  &__wrapper {
+    max-width: 1280px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+    padding-top: 32px;
+    font-family: $inter;
+
+    @include breakpoint(lg) {
+      flex-direction: row;
+    }
+
+    &__left {
+      order: 1;
+
+      @include breakpoint(lg) {
+        order: 2;
+      }
+
+      &__image {
+        // padding: 40px;
+        background: url(../../../assets/svgs/Ellipse.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom center;
+
+        @include breakpoint(lg) {
+          background: unset;
+        }
+        
+        img {
+          margin-bottom: -5px;
+          width: 200px;
+          height: 200px;
+          overflow: hidden;
+          border-radius: 50%;
+          
+
+          @include breakpoint(lg) {
+            object-fit: cover;
+            width: unset;
+            height: unset;
+            overflow: unset;
+          }
+        }
+      }
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      color: $dark;
+      padding: 1rem;
+      order: 2;
+
+      @include breakpoint(lg) {
+        max-width: 419px;
+        padding: 0;
+        order: 1;
+      }
+
+      &__title {
+        margin-bottom: 24px;
+        h3 {
+          font-size: 24px;
+
+          @include breakpoint(sm) {
+            font-size: 32px;
+          }
+        }
+        button {
+          width: 95px;
+          height: 30px;
+          border: 1px solid $pink;
+          border-radius: 4px;
+          margin-top: 6px;
+          background: transparent;
+          color: $pink;
+          font-size: 13px;
+          cursor: pointer;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+      }
+
+      &__footer {
+        margin-top: 24px;
+        display: inline-flex;
+        flex-direction: column;
+        max-width: 247px;
+
+        p {
+          font-weight: 500;
+          color: $pink;
           letter-spacing: 0.2em;
         }
       }

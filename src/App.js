@@ -4,6 +4,7 @@ import SecondHeader from './components/Header/SecondHeader';
 import Banner from './components/Home/Banner/Banner';
 import Clients from './components/Home/ClientsCard/Clients/Clients';
 import Experience from './components/Home/Experience/Experience';
+import ExperienceTwo from './components/Home/Experience/ExperienceTwo';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <Banner />
      <Experience />
      <Clients />
+     <ExperienceTwo />
      <Footer />
     </div>
   );
